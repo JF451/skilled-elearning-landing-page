@@ -1,0 +1,173 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  width: 335px;
+  height: 122px;  
+  background: linear-gradient(to bottom, #FF6F48, #F02AA6);
+  color: #fff;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1em;
+  width: 100%;
+  grid-area: h2;
+}
+footer {
+  display: flex;
+  align-items: center;
+  background-color: #13183F;
+  justify-content: space-around;
+  gap: 80em;
+ }
+
+ .footer-btn {
+  cursor: pointer;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 28px;
+  background: linear-gradient(to bottom, #4851FF, #F02AA6);
+ }
+
+main {
+ display: flex;
+ flex-direction: column;
+ align-items: start;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 25em;
+  margin-bottom: 1em;
+}
+
+.header-btn {
+  background-color: #13183F;
+  color: #fff;
+  cursor: pointer;
+  padding: 16px 32px;
+  border-radius: 26px;
+}
+.responsive-banner {
+  width: 100%;
+  height: 400px;
+  background-image: url("./assets/image-hero-mobile.png");
+  background-size: cover;
+  background-position: center;
+}
+
+ main > p {
+  margin-top: 1em;
+  width: 40%;
+  margin-bottom: 1em;
+ }
+
+ .main-btn {
+  background: linear-gradient(to bottom, #FF6F48, #F02AA6);
+  border: none;
+  padding: 16px 32px;
+  border-radius: 26px;
+ }
+
+ .cards {
+  display: grid;
+  grid-template-areas: 
+  "h2"
+  "animation"
+  "design"
+  "photography"
+  "crypto"
+  "business"
+  ;
+  gap: 2em;
+ }
+
+ .card {
+  padding: 2em;
+ }
+
+ .card > img {
+  width: 56px;
+  height: 56px;
+  margin: 1em 0em;
+ }
+
+ .card > p {
+  margin: 1em 0;
+ }
+
+ .card > p:nth-of-type(2) {
+  color: #F74780;
+ }
+
+ .animation {
+  grid-area: animation;
+  box-shadow: 0 25px 50px 0 #06168D;
+ }
+
+ .design {
+  grid-area: design;
+  box-shadow: 0 25px 50px 0 #06168D;
+ }
+
+ .photography {
+  grid-area: photography;
+  box-shadow: 0 25px 50px 0 #06168D;
+ }
+
+ .crypto {
+  grid-area: crypto;
+  box-shadow: 0 25px 50px 0 #06168D;
+ }
+
+ .business {
+  grid-area: business;
+  box-shadow: 0 25px 50px 0 #06168D;
+ }
+
+
+ @media (min-width: 60em) {
+  .responsive-banner {
+    width: 100%;
+  height: 400px;
+  background-image: url("./assets/image-hero-desktop.webp");
+  background-size: cover;
+  background-position: center;
+  }
+  .main-header {
+    display: flex;
+    align-items: center;
+  }
+
+  .cards {
+    grid-template-areas: 
+    "h2 animation"
+    "design photography"
+    "crypto business"
+    ;
+  }
+ }
+
+ @media (min-width: 80em) {
+  .cards {
+    grid-template-areas: 
+    "h2 animation design"
+    "photography crypto business"
+    ;
+  }
+ }
